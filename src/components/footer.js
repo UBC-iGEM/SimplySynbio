@@ -2,6 +2,8 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components';
 import UbcLogo from '../images/ubcigem-logo.svg'
+import { StaticImage } from 'gatsby-plugin-image';
+
 
 
 const FooterLink = styled(Link)`
@@ -61,7 +63,7 @@ const Footer = () => {
             <div className="sub-footer-div">
                 <Center>
                     <FooterLink to="https://ubcigem.com/">
-                        <img src={UbcLogo} alt="UBC iGEM Logo"></img>
+                        <StaticImage src='../images/ubcigem-logo.svg' width={125}/>
                     </FooterLink>
                 </Center>
             </div>
