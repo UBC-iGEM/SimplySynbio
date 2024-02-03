@@ -1,7 +1,7 @@
 ## How to contribute
 
 ### Writing blog posts
-Check out the instructions here [TODO].
+Check out the instructions [here](https://drive.google.com/drive/folders/1jITFFIamQi7odrHSLpSBHzKOZgQaLNiq?usp=sharing).
 
 ### Developing the website
 1. Claim an [issue](https://github.com/UBC-iGEM/simplysynbio/issues).
