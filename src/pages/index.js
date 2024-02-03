@@ -13,6 +13,16 @@ const MonthlyBackgroundDiv = styled(Background)`
   height: 100vh;
 `
 
+const DisplayArticleDiv = styled.div`
+  display: flex;
+
+  img {
+    margin: 30px;
+    width:200px;
+  }
+
+`;
+
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
@@ -41,6 +51,8 @@ const BlogIndex = ({ data, location }) => {
 
             return (
               <li key={post.fields.slug}>
+                <DisplayArticleDiv>
+                <img src={post.frontmatter.frontImage} alt="article-img"/>
                 <article
                   className="post-list-item"
                   itemScope
@@ -63,6 +75,7 @@ const BlogIndex = ({ data, location }) => {
                     />
                   </section>
                 </article>
+                </DisplayArticleDiv>
               </li>
             )
           })}
