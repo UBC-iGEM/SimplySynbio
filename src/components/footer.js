@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components';
-import UbcLogo from '../images/ubcigem-logo.png'
+import UbcLogo from '../images/ubcigem-logo.svg'
 
 
 const FooterLink = styled(Link)`
@@ -9,10 +9,10 @@ const FooterLink = styled(Link)`
     text-decoration: none;
 `;
 
-const FooterDiv = styled.div`
+const FooterDiv = styled.footer`
     background-color: white;
     font-family: 'Open Sans', sans-serif;
-    padding: 1rem 4rem 4rem;
+    padding: 4rem 4rem 4rem;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -26,7 +26,7 @@ const FooterDiv = styled.div`
 
     img {
         width: 100%; 
-        max-width: 115px; 
+        max-width: 125px; 
         display: block;
     }
     
@@ -62,7 +62,7 @@ const Footer = () => {
                 <FooterLink to="/">
                     <p>SimplySynBio Home</p>
                 </FooterLink>
-                <FooterLink to="/video-series">
+                <FooterLink to="https://www.youtube.com/watch?v=XH2Rd_OYp_Q&list=PL-Wy-ch12gXt96tBfWj4FfzIQQt-fnwPE&pp=iAQB">
                     <p>Video Series</p>
                 </FooterLink>
                 <FooterLink to="https://ubcigem.com/">
