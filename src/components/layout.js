@@ -5,6 +5,7 @@ import Logo from "../images/logo-trans.svg"
 import { Background } from "../components/constants"
 import styled from "styled-components"
 import MonthlyBackground from "../images/monthly-background.svg"
+import MonthlyBackgroundMobile from "../images/monthly-background-mobile.svg"
 
 const MonthlyBlogHeaderDiv = styled(Background)`
   background-image: url(${MonthlyHeader});
@@ -13,6 +14,11 @@ const MonthlyBlogHeaderDiv = styled(Background)`
 const MonthlyBackgroundDiv = styled(Background)`
   background-image: url(${MonthlyBackground});
   height: 100vh;
+
+  @media only screen and (max-width: 600px) {
+    background-image: url(${MonthlyBackgroundMobile});
+    background-position: top;
+  }
 `
 
 const Layout = ({ location, title, children }) => {
