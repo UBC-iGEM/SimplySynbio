@@ -9,6 +9,11 @@ const FooterLink = styled(Link)`
     text-decoration: none;
 `;
 
+const Center = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 const FooterDiv = styled.footer`
     background-color: white;
     font-family: 'Open Sans', sans-serif;
@@ -31,8 +36,8 @@ const FooterDiv = styled.footer`
     }
     
     p {
-        font-size: 20ptx;
-        line-height: 15ptx;
+        font-size: 16px;
+        line-height: 30px;
         margin: 0.2rem 0;
         cursor: pointer;
     }
@@ -54,9 +59,11 @@ const Footer = () => {
     return(
         <FooterDiv>
             <div className="sub-footer-div">
-                <FooterLink to="https://ubcigem.com/">
-                    <img src={UbcLogo} alt="UBC iGEM Logo"></img>
-                </FooterLink>
+                <Center>
+                    <FooterLink to="https://ubcigem.com/">
+                        <img src={UbcLogo} alt="UBC iGEM Logo"></img>
+                    </FooterLink>
+                </Center>
             </div>
             <div className="sub-footer-div">
                 <FooterLink to="/">
