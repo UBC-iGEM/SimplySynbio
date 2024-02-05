@@ -1,6 +1,6 @@
 ---
 title: Introducing our new initiative... Simply Synbio!
-date: "2024-02-02"
+date: "2024-02-05"
 description: "Our New Initiative"
 ---
 
@@ -14,7 +14,7 @@ Our wider team competes in the annual iGEM Jamboree, a big synthetic biology com
 
 Simply Synbio is a project built upon what our 2023 UBC iGEM team created in the past year. The past team was able to communicate science through an [animated video series](https://www.youtube.com/watch?v=XH2Rd_OYp_Q&t=1s&ab_channel=UBCiGEM); our team would like to carry on that torch, but with two new platforms - this blog and Instagram. 
 
-Through this blog, we would like you to join us in exploring new advances in science. Members of our team will be volunteering their time to break down new breakthroughs in biological engineering so that we can all enjoy and celebrate the cool science that is happening around us. Each blog post will be accompanied by an Instagram post that is ever further condensed; you can find our Instagram [@simplysynbio](https://www.instagram.com/simplysynbio/). 
+Through this blog, we would like you to join us in exploring new advances in science. Members of our team will be volunteering their time to break down new breakthroughs in biological engineering so that we can all enjoy and celebrate the cool science that is happening around us. Each blog post will be accompanied by an Instagram post that is even further condensed; you can find our Instagram [@simplysynbio](https://www.instagram.com/simplysynbio/). 
 
 So that’s that. Please stay tuned for our first official post coming soon… I hear it has something to do with the ocean! 
 
