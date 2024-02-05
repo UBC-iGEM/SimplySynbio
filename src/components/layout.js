@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import Footer from "./footer"
 import MonthlyHeader from "../images/blog-header.svg"
 import Logo from "../images/logo-trans.svg"
 import { Background } from "../components/constants"
@@ -45,12 +46,8 @@ const Layout = ({ location, title, children }) => {
       <header className="global-header">{header}</header>
       <div className="global-wrapper" data-is-root-path={isRootPath}>
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
       </div>
+      <Footer/>
     </>
   )
 }
