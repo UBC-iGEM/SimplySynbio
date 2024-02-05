@@ -1,11 +1,13 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import Footer from "./footer"
-import MonthlyHeader from "../images/blog-header.svg"
+// import MonthlyHeader from "../images/blog-header.svg"
+import MonthlyHeader from "../images/header.png"
 import Logo from "../images/logo-trans.svg"
 import { Background } from "../components/constants"
 import styled from "styled-components"
-import MonthlyBackground from "../images/monthly-background.svg"
+// import MonthlyBackground from "../images/monthly-background.svg"
+import MonthlyBackground from "../images/water.png"
 import MonthlyBackgroundMobile from "../images/monthly-background-mobile.svg"
 
 const MonthlyBlogHeaderDiv = styled(Background)`
@@ -47,7 +49,7 @@ const Layout = ({ location, title, children }) => {
       <div className="global-wrapper" data-is-root-path={isRootPath}>
         <main>{children}</main>
       </div>
-      <Footer/>
+      <Footer />
     </>
   )
 }
