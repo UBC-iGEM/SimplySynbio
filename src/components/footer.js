@@ -1,7 +1,9 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components';
-import UbcLogo from '../images/ubcigem-logo.png'
+import UbcLogo from '../images/ubcigem-logo.svg'
+import { StaticImage } from 'gatsby-plugin-image';
+
 
 
 const FooterLink = styled(Link)`
@@ -9,10 +11,15 @@ const FooterLink = styled(Link)`
     text-decoration: none;
 `;
 
-const FooterDiv = styled.div`
+const Center = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const FooterDiv = styled.footer`
     background-color: white;
     font-family: 'Open Sans', sans-serif;
-    padding: 1rem 4rem 4rem;
+    padding: 4rem 4rem 4rem;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -26,13 +33,13 @@ const FooterDiv = styled.div`
 
     img {
         width: 100%; 
-        max-width: 115px; 
+        max-width: 125px; 
         display: block;
     }
     
     p {
-        font-size: 20ptx;
-        line-height: 15ptx;
+        font-size: 16px;
+        line-height: 30px;
         margin: 0.2rem 0;
         cursor: pointer;
     }
@@ -54,15 +61,17 @@ const Footer = () => {
     return(
         <FooterDiv>
             <div className="sub-footer-div">
-                <FooterLink to="https://ubcigem.com/">
-                    <img src={UbcLogo} alt="UBC iGEM Logo"></img>
-                </FooterLink>
+                <Center>
+                    <FooterLink to="https://ubcigem.com/">
+                        <StaticImage src='../images/ubcigem-logo.svg' width={125}/>
+                    </FooterLink>
+                </Center>
             </div>
             <div className="sub-footer-div">
                 <FooterLink to="/">
                     <p>SimplySynBio Home</p>
                 </FooterLink>
-                <FooterLink to="/video-series">
+                <FooterLink to="https://www.youtube.com/watch?v=XH2Rd_OYp_Q&list=PL-Wy-ch12gXt96tBfWj4FfzIQQt-fnwPE&pp=iAQB">
                     <p>Video Series</p>
                 </FooterLink>
                 <FooterLink to="https://ubcigem.com/">
