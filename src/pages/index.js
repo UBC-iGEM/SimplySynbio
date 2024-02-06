@@ -5,14 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import styled from "styled-components"
-import MonthlyBackground from "../images/water.svg"
-import { Background } from "../components/constants"
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-
-const MonthlyBackgroundDiv = styled(Background)`
-  background-image: url(${MonthlyBackground});
-  height: 100vh;
-`
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const DisplayArticleDiv = styled.div`
   display: flex;
@@ -21,8 +14,7 @@ const DisplayArticleDiv = styled.div`
     margin: 30px;
     width: 180px;
   }
-
-`;
+`
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -50,31 +42,34 @@ const BlogIndex = ({ data, location }) => {
 
           return (
             <li key={post.fields.slug}>
-                <DisplayArticleDiv>
-                <GatsbyImage image={getImage(post.frontmatter.frontImage)} alt="article-img"/>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
-                </DisplayArticleDiv>
+              <DisplayArticleDiv>
+                <GatsbyImage
+                  image={getImage(post.frontmatter.frontImage)}
+                  alt="article-img"
+                />
+                <article
+                  className="post-list-item"
+                  itemScope
+                  itemType="http://schema.org/Article"
+                >
+                  <header>
+                    <h2>
+                      <Link to={post.fields.slug} itemProp="url">
+                        <span itemProp="headline">{title}</span>
+                      </Link>
+                    </h2>
+                    <small>{post.frontmatter.date}</small>
+                  </header>
+                  <section>
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: post.frontmatter.description || post.excerpt,
+                      }}
+                      itemProp="description"
+                    />
+                  </section>
+                </article>
+              </DisplayArticleDiv>
             </li>
           )
         })}
