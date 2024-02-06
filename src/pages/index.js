@@ -7,6 +7,7 @@ import Seo from "../components/seo"
 import styled from "styled-components"
 import MonthlyBackground from "../images/water.svg"
 import { Background } from "../components/constants"
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const MonthlyBackgroundDiv = styled(Background)`
   background-image: url(${MonthlyBackground});
@@ -16,9 +17,9 @@ const MonthlyBackgroundDiv = styled(Background)`
 const DisplayArticleDiv = styled.div`
   display: flex;
 
-  img {
+  .gatsby-image-wrapper {
     margin: 30px;
-    width:200px;
+    width: 180px;
   }
 
 `;
@@ -52,7 +53,7 @@ const BlogIndex = ({ data, location }) => {
             return (
               <li key={post.fields.slug}>
                 <DisplayArticleDiv>
-                <img src={post.frontmatter.frontImage} alt="article-img"/>
+                <GatsbyImage image={getImage(post.frontmatter.frontImage)} alt="article-img"/>
                 <article
                   className="post-list-item"
                   itemScope
@@ -111,6 +112,15 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          frontImage {
+            childImageSharp {
+              gatsbyImageData(
+                width: 180
+                placeholder: NONE
+                formats: [AUTO, WEBP]
+              )
+            }
+          }
         }
       }
     }

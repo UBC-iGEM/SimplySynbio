@@ -2,6 +2,7 @@
 title: What's iGEM
 date: "2015-05-01T22:12:03.284Z"
 description: "What is iGEM?"
+frontImage: "./salty_egg.jpg"
 ---
 
 This is my first post on my new fake blog! How exciting!
