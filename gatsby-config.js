@@ -8,14 +8,14 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  pathPrefix: "/SimplySynbio",
+  pathPrefix: "/simplysynbio",
   siteMetadata: {
     title: `Simply Synbio`,
     author: {
       name: `Yejin Lhee.`,
       summary: `@ubcigem’s scientific blog. Stay tuned for up-and-coming synthetic biology news!`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `@ubcigem’s scientific blog. Stay tuned for up-and-coming synthetic biology news!`,
     siteUrl: `http://ubcigem.com/simplysynbio/`,
     social: {
       instagram: `simplysynbio`,
