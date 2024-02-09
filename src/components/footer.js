@@ -1,8 +1,8 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { StaticImage } from "gatsby-plugin-image"
 import { Center } from "./constants"
+import Logo from "../images/ubcigem-logo.svg"
 
 const FooterLink = styled(Link)`
   color: black;
@@ -56,7 +56,7 @@ const Footer = () => {
       <div className="sub-footer-div">
         <Center>
           <FooterLink to="https://ubcigem.com/">
-            <StaticImage src="../images/ubcigem-logo.svg" width={125} />
+            <img src={Logo} />
           </FooterLink>
         </Center>
       </div>

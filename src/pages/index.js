@@ -5,7 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import styled from "styled-components"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image"
 import { Center } from "../components/constants"
 
 const DisplayArticleDiv = styled.div`
@@ -119,11 +119,7 @@ export const pageQuery = graphql`
           description
           frontImage {
             childImageSharp {
-              gatsbyImageData(
-                width: 180
-                placeholder: NONE
-                formats: [AVIF, JPG, PNG, WEBP]
-              )
+              gatsbyImageData(placeholder: NONE, formats: [AUTO, WEBP])
             }
           }
         }

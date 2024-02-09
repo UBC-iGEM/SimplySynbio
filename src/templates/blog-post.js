@@ -27,7 +27,6 @@ const BlogPostTemplate = ({
             itemProp="articleBody"
           />
           <hr />
-          <footer>{/* TODO */}</footer>
         </article>
         <nav className="blog-post-nav">
           <ul
