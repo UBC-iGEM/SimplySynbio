@@ -6,13 +6,22 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { Center } from "../components/constants"
 
 const DisplayArticleDiv = styled.div`
   display: flex;
+  flex-direction: row;
 
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+  }
   .gatsby-image-wrapper {
-    margin: 30px;
-    width: 180px;
+    margin: 15px;
+    width: 15vw;
+    @media only screen and (max-width: 600px) {
+      width: 70vw;
+      height: 20vh;
+    }
   }
 `
 
@@ -43,23 +52,27 @@ const BlogIndex = ({ data, location }) => {
           return (
             <li key={post.fields.slug}>
               <DisplayArticleDiv>
-                <GatsbyImage
-                  image={getImage(post.frontmatter.frontImage)}
-                  alt="article-img"
-                />
+                <Center>
+                  <GatsbyImage
+                    image={getImage(post.frontmatter.frontImage)}
+                    alt="article-img"
+                  />
+                </Center>
                 <article
                   className="post-list-item"
                   itemScope
                   itemType="http://schema.org/Article"
                 >
-                  <header>
-                    <h2>
-                      <Link to={post.fields.slug} itemProp="url">
-                        <span itemProp="headline">{title}</span>
-                      </Link>
-                    </h2>
-                    <small>{post.frontmatter.date}</small>
-                  </header>
+                  <Center>
+                    <header>
+                      <h2>
+                        <Link to={post.fields.slug} itemProp="url">
+                          <span itemProp="headline">{title}</span>
+                        </Link>
+                      </h2>
+                      <small>{post.frontmatter.date}</small>
+                    </header>
+                  </Center>
                   <section>
                     <p
                       dangerouslySetInnerHTML={{
@@ -109,7 +122,7 @@ export const pageQuery = graphql`
               gatsbyImageData(
                 width: 180
                 placeholder: NONE
-                formats: [AUTO, WEBP]
+                formats: [AVIF, JPG, PNG, WEBP]
               )
             }
           }

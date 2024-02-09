@@ -9,3 +9,7 @@ export const Background = styled.div`
   @media only screen and (max-width: 600px) {
   }
 `
+export const Center = styled.div`
+  display: flex;
+  justify-content: center;
+`
