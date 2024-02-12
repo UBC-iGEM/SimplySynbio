@@ -3,6 +3,8 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { Center } from "../components/constants"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
@@ -22,6 +24,13 @@ const BlogPostTemplate = ({
             <h1 itemProp="headline">{post.frontmatter.title}</h1>
             <p>Written by {post.frontmatter.author}</p>
             <p>{post.frontmatter.date}</p>
+            <Center>
+              <GatsbyImage
+                image={getImage(post.frontmatter.frontImage)}
+                alt="article-img"
+              />
+            </Center>
+            <br />
           </header>
           <section
             dangerouslySetInnerHTML={{ __html: post.html }}
@@ -90,6 +99,11 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         author
+        frontImage {
+          childImageSharp {
+            gatsbyImageData(placeholder: NONE, formats: [AUTO, WEBP])
+          }
+        }
         description
       }
     }

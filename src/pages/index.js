@@ -5,7 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import styled from "styled-components"
-import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Center } from "../components/constants"
 
 const DisplayArticleDiv = styled.div`
@@ -70,7 +70,11 @@ const BlogIndex = ({ data, location }) => {
                           <span itemProp="headline">{title}</span>
                         </Link>
                       </h2>
-                      <p><b><i>{post.frontmatter.author}</i></b></p>
+                      <p>
+                        <b>
+                          <i>{post.frontmatter.author}</i>
+                        </b>
+                      </p>
                       <small>{post.frontmatter.date}</small>
                     </header>
                   </Center>
