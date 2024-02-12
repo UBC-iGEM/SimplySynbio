@@ -20,7 +20,7 @@ const BlogPostTemplate = ({
         >
           <header>
             <h1 itemProp="headline">{post.frontmatter.title}</h1>
-            <p><i>{post.frontmatter.author}</i></p>
+            <p>Written by {post.frontmatter.author}</p>
             <p>{post.frontmatter.date}</p>
           </header>
           <section
