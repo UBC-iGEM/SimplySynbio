@@ -70,6 +70,7 @@ const BlogIndex = ({ data, location }) => {
                           <span itemProp="headline">{title}</span>
                         </Link>
                       </h2>
+                      <p><b><i>{post.frontmatter.author}</i></b></p>
                       <small>{post.frontmatter.date}</small>
                     </header>
                   </Center>
@@ -117,6 +118,7 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          author
           frontImage {
             childImageSharp {
               gatsbyImageData(placeholder: NONE, formats: [AUTO, WEBP])
