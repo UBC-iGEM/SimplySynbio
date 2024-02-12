@@ -62,7 +62,7 @@ const Footer = () => {
       </div>
       <div className="sub-footer-div">
         <FooterLink to="/">
-          <p>SimplySynBio Home</p>
+          <p>Simply Synbio Home</p>
         </FooterLink>
         <FooterLink to="https://www.youtube.com/watch?v=XH2Rd_OYp_Q&list=PL-Wy-ch12gXt96tBfWj4FfzIQQt-fnwPE&pp=iAQB">
           <p>Video Series</p>
