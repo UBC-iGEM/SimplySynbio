@@ -3,6 +3,7 @@ title: Introducing our new initiative... Simply Synbio!
 date: "2024-02-05"
 description: "Our New Initiative"
 frontImage: "team-photo.jpg"
+author: "Yejin Lhee"
 ---
 
 Hello from our Human Practices (HP) team members of UBC iGEM 2024!

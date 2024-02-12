@@ -20,6 +20,7 @@ const BlogPostTemplate = ({
         >
           <header>
             <h1 itemProp="headline">{post.frontmatter.title}</h1>
+            <p><i>{post.frontmatter.author}</i></p>
             <p>{post.frontmatter.date}</p>
           </header>
           <section
@@ -88,6 +89,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        author
         description
       }
     }
