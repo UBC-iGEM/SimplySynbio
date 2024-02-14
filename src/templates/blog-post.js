@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { Center } from "../components/constants"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import styled from "styled-components"
 
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
@@ -22,9 +23,12 @@ const BlogPostTemplate = ({
         >
           <header>
             <h1 itemProp="headline">{post.frontmatter.title}</h1>
-            <p>Written by {post.frontmatter.author}</p>
-            <p>{post.frontmatter.date}</p>
-            <Center>
+            <p style={{ margin: "0" }}>
+              <i>{post.fields.readingTime.text}</i>
+            </p>
+            <p style={{ margin: "0" }}>Written by {post.frontmatter.author}</p>
+            <p style={{ margin: "0" }}>{post.frontmatter.date}</p>
+            <Center style={{ marginTop: "25px" }}>
               <GatsbyImage
                 image={getImage(post.frontmatter.frontImage)}
                 alt="article-img"
@@ -105,6 +109,12 @@ export const pageQuery = graphql`
           }
         }
         description
+      }
+      fields {
+        slug
+        readingTime {
+          text
+        }
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

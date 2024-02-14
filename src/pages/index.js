@@ -20,6 +20,7 @@ const DisplayArticle = styled.article`
     @media only screen and (max-width: 600px) {
       width: 70vw;
       height: 20vh;
+      margin-bottom: 15px;
     }
     @media only screen and (min-width: 600px) {
       margin-right: 15px;
@@ -71,6 +72,7 @@ const BlogIndex = ({ data, location }) => {
                         <span itemProp="headline">{title}</span>
                       </Link>
                     </h2>
+                    <small>{post.fields.readingTime.text}</small>
                     <p>
                       <b>
                         <i>{post.frontmatter.author}</i>
@@ -115,6 +117,9 @@ export const pageQuery = graphql`
         excerpt
         fields {
           slug
+          readingTime {
+            text
+          }
         }
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
