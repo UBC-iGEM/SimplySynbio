@@ -8,7 +8,7 @@ import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Center } from "../components/constants"
 
-const DisplayArticleDiv = styled.div`
+const DisplayArticle = styled.article`
   display: flex;
   flex-direction: row;
 
@@ -16,11 +16,13 @@ const DisplayArticleDiv = styled.div`
     flex-direction: column;
   }
   .gatsby-image-wrapper {
-    margin: 15px;
     width: 15vw;
     @media only screen and (max-width: 600px) {
       width: 70vw;
       height: 20vh;
+    }
+    @media only screen and (min-width: 600px) {
+      margin-right: 15px;
     }
   }
 `
@@ -51,43 +53,39 @@ const BlogIndex = ({ data, location }) => {
 
           return (
             <li key={post.fields.slug}>
-              <DisplayArticleDiv>
+              <DisplayArticle
+                className="post-list-item"
+                itemScope
+                itemType="http://schema.org/Article"
+              >
                 <Center>
                   <GatsbyImage
                     image={getImage(post.frontmatter.frontImage)}
                     alt="article-img"
                   />
                 </Center>
-                <article
-                  className="post-list-item"
-                  itemScope
-                  itemType="http://schema.org/Article"
-                >
-                  <Center>
-                    <header>
-                      <h2>
-                        <Link to={post.fields.slug} itemProp="url">
-                          <span itemProp="headline">{title}</span>
-                        </Link>
-                      </h2>
-                      <p>
-                        <b>
-                          <i>{post.frontmatter.author}</i>
-                        </b>
-                      </p>
-                      <small>{post.frontmatter.date}</small>
-                    </header>
-                  </Center>
-                  <section>
+                <Center>
+                  <header>
+                    <h2>
+                      <Link to={post.fields.slug} itemProp="url">
+                        <span itemProp="headline">{title}</span>
+                      </Link>
+                    </h2>
+                    <p>
+                      <b>
+                        <i>{post.frontmatter.author}</i>
+                      </b>
+                    </p>
+                    <small>{post.frontmatter.date}</small>
                     <p
                       dangerouslySetInnerHTML={{
                         __html: post.frontmatter.description || post.excerpt,
                       }}
                       itemProp="description"
                     />
-                  </section>
-                </article>
-              </DisplayArticleDiv>
+                  </header>
+                </Center>
+              </DisplayArticle>
             </li>
           )
         })}
