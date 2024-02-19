@@ -5,9 +5,11 @@ description: "Solving coral reef bleaching"
 author: "Claire Pinckney"
 ---
 
+_Adapted from: https://www.science.org/doi/10.1126/sciadv.aba2498_
+
 In the discussion of climate change’s impacts on our world, you’ve likely heard plenty about coral reefs. The increasing temperatures caused by greenhouse gases are heating up our oceans and damaging the coral. The microalgae that live in these coral reef systems flee when the heat becomes deadly for them, causing the coral to ‘bleach’, or, in other words, die due to a lack of nutrients.  Even if you really care about the ocean, you may still wonder— how far do the impacts of coral reef heating and bleaching go? And what does synthetic biology have to do with it? 
 
-A post from The Reef-World Foundation says it all best. Beyond housing 25% of all marine life, coral reefs are vital to the economy through coastal fisheries and tourism, they protect coastlines from harsh conditions for people and animals alike, and they’re a gold mine for medical research. Now that we’ve established the importance of coral reefs, it’s clear why the damage and death that heat and bleaching thrust upon them is dangerous. Bueger et al. approached solving this problem with a microalgae that commonly lives in symbiosis with coral, which shows promise for synthetic biology applications in the future.
+A post from [The Reef-World Foundation](https://reef-world.org/blog/no-coral-reefs) says it all best. Beyond housing 25% of all marine life, coral reefs are vital to the economy through coastal fisheries and tourism, they protect coastlines from harsh conditions for people and animals alike, and they’re a [gold mine for medical research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3976867/). Now that we’ve established the importance of coral reefs, it’s clear why the damage and death that heat and bleaching thrust upon them is dangerous. [Bueger et al.](https://www.science.org/doi/10.1126/sciadv.aba2498) approached solving this problem with a microalgae that commonly lives in symbiosis with coral, which shows promise for synthetic biology applications in the future.
 
 **Making stronger friendships**
 
@@ -30,8 +32,3 @@ As is true with most science there is still more research to be done. Can the co
 While it’s still extremely important to tackle climate change at the source, synthetic biology helps ecosystems adapt to the changes that have already resulted from it. Synthetic biology is all about modifying organisms to adapt to new conditions. Think of it like enforcing a beneficial genetic mutation and significantly speeding up what would come through luck after years of evolution. So what if we could use this knowledge to help coral to persist in warmer conditions, and even resist bleaching? Instead of heat training microalgae repeatedly over time, we could use the heat tolerant microalgae as a blueprint to modify microalgae to do exactly as we need, like becoming resilient to year round temperatures. 
 
 However, these possibilities are still early in testing, as synthetic biology is a quickly developing but relatively new field. Research on using synthetic biology for coral is something to keep an eye out for in our near future!
-
-
-Have a good day,
-
-Claire, on behalf of the UBC iGEM Human Practices subteam
