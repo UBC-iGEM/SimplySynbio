@@ -2,6 +2,7 @@
 title: "Biosynthetic Sensors - A Synthetic Biology Tool for Environmental Protection"
 date: "2024-04-18"
 description: "Detecting toxic pollutants using synthetic biology"
+frontImage: "soil-contamination.jpg"
 author: "Charlotte Lee"
 ---
 
